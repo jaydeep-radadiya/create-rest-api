@@ -1,0 +1,109 @@
+website: static content, readonly
+wikipidia, TOI, blog
+
+webapp: dynamic content, read & write
+insta, FB, Netflix, tinder
+
+webapp can replace websites
+
+
+don't bring elephant to kill an ant
+KISS: keep it smple silly
+
+
+API: ways to creae api
+1) SOAP: simple objet access protocol
+uses xml, xml is lang newtral
+SOAP is slow, speed of transfering data is slow
+SOAP is slow bcoz of xml, xml is very heavy (it has lots of 90% metadata, 10% actual data)
+
+
+2) REST: representational state transfer
+pratical & flexible
+fast, uses json to transfer data from one app to another
+REST can be configured with: xml, json, protobuf, aggro, textfile etc
+
+
+data's state (representation, form) is transfered from layer to layer 
+that why it is known as representation state transfered
+
+
+URI: unique resouce identifier
+ip_address:port_no/app_name/resource_no/id
+vehicle mgmt sys: 127.0.0.1:8080/vms/vehicle/1234
+uber: 127.0.0.1:8080/geo_location/location_id/599
+
+
+actions on resource: CRUD
+REST is built on HTTP
+create  -> post
+read    -> get
+update  -> put
+delete  -> delete
+
+
+both (actions & location) together known as restful api endpoints
+
+actions(what to do)         location(URI)
+post (create)               127.0.0.1:8080/bms/movies
+get (search)                127.0.0.1:8080/bms/movies/dhoom
+put (update)                127.0.0.1:8080/bms/movies/ranjna
+delete (delete)             127.0.0.1:8080/bms/movies/ranjna
+
+post (create)               127.0.0.1:8080/vms/vehicle/ather
+
+
+what is js & node.js?
+synchronus vs asynchronous processing?
+
+synchronus processing is bocking, wait for process completion  
+asynchronus processing is non blocking, don't wait for sonmething complete
+
+
+framwork: standard to create app
+
+
+ideaapp
+create idea         => POST 127.0.0.7:8080/ideaapp/ideas/
+search all idea     => GET  127.0.0.7:8080/ideaapp/ideas/
+update idea         => PUT  127.0.0.7:8080/ideaapp/ideas/
+
+
+package.json => metadata of project
+
+
+express supports middleware
+what is middleware?
+why we use it?
+how to build it?
+
+
+in JS middleware is function which has control of 3 things
+1) request obj
+2) response obj
+3) next (power of moved to next step)
+
+
+middleware is something which stays in middle to check, validate, authentication things before the actual processing
+
+nodejs, JS, express: unopiniated framework, no fixed rule
+
+
+backend divided into 3 layers
+1) routes        => receptionist
+2) controllers   => waiter
+3) models        => cook
+
+proper ways to write
+model, controllers, routes
+cook, waiter, receptionist
+
+
+our entire app is in JS
+customer is sending JSON type data
+but your app is not ready to convert JSON to JS
+to convert JSON into JS use express inbuilt middleware
+app.use(express.JSON())
+
+
+path parameter & request parameter
